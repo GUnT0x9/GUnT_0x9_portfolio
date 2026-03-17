@@ -1,0 +1,78 @@
+{
+  "hero": {
+    "role": "사이버보안 학생 / 미래의 악성코드 분석가",
+    "realName": "aka 김건우",
+    "description1": "리버스 엔지니어링과 취약점 분석을 중심으로 연구하는 사이버 보안 분야의 학생입니다.",
+    "description2": "바이너리 분석, 보호 기법 우회, 그리고 저수준 실행 흐름 분석을 통해 소프트웨어의 내부 동작 원리를 깊이 있게 이해하는 데 집중하고 있습니다.",
+    "description3": "특히 악성코드 분석과 리버스 엔지니어링 분야에 높은 관심을 가지고 있으며, CTF 대회 참여를 통해 웹 보안과 암호학 분야의 지식과 실전 경험을 함께 확장하고 있습니다."
+  },
+  "navigation": {
+    "about": "소개",
+    "education": "학력",
+    "skills": "기술",
+    "projects": "프로젝트", 
+    "awards": "수상",
+    "contact": "연락처"
+  },
+  "security": {
+    "title": "해킹 분야",
+    "subtitle": "전문 분야"
+  },
+  "tools": {
+    "title": "리버싱 툴",
+    "subtitle": "필수 툴셋"
+  },
+  "skills": {
+    "title": "프로그래밍 언어",
+    "subtitle": "기술 수준"
+  },
+  "devStack": {
+    "title": "개발 스택",
+    "subtitle": "프론트엔드 기술"
+  },
+  "projects": {
+    "title": "프로젝트",
+    "subtitle": "주요 작업",
+    "title1": "리버스 엔지니어링 CTF 챌린지",
+    "description1": "경쟁 환경에서 복잡한 바이너리 퍼즐을 해결하는 것",
+    "title2": "ELF 바이너리 분석",
+    "description2": "리눅스 실행 파일을 분석하고 플래그를 추출하는 것",
+    "title3": "디컴파일된 함수 리버싱",
+    "description3": "디컴파일된 함수에서 리버스 연산을 구현하는 것",
+    "title4": "웹어셈블리 분석",
+    "description4": "웹어셈블리 기반 패스코드 확인 로직을 분석하는 것",
+    "title5": "VM 기반 챌린지 해결",
+    "description5": "커스텀 가상 머신 구현을 리버싱하는 것",
+    "title6": "커스텀 CTF 문제 설계",
+    "description6": "커스텀 리버싱 CTF 문제를 설계하고 구축하는 것",
+    "title7": "보안 대회 참여",
+    "description7": "팀 기반 해킹 챌린지와 대회에 참여하는 것"
+  },
+  "education": {
+    "title": "학력",
+    "subtitle": "학력 경로",
+    "school1": "호곡초등학교",
+    "period1": "2016 ~ 2022",
+    "school2": "호곡중학교", 
+    "period2": "2023 ~ 2025",
+    "school3": "세명컴퓨터고등학교",
+    "period3": "2025 ~",
+    "field1": "스마트보안솔루션과"
+  },
+  "awards": {
+    "title": "수상",
+    "subtitle": "성취"
+  },
+  "contact": {
+    "title": "연락처",
+    "subtitle": "연락하기",
+    "role1": "사이버보안 학생",
+    "role2": "리버스 엔지니어링 애호가스트",
+    "role3": "미래의 악성코드 분석가",
+    "status": "기회를 기다립니다",
+    "emailLabel": "이메일",
+    "githubLabel": "깃허브",
+    "locationLabel": "위치",
+    "location": "대한민국"
+  }
+}

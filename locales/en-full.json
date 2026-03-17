@@ -1,0 +1,78 @@
+{
+  "hero": {
+    "role": "Cybersecurity Student / Future Malware Analyst",
+    "realName": "aka Kim Gunwoo",
+    "description1": "A cybersecurity student specializing in reverse engineering and vulnerability analysis.",
+    "description2": "Studying how software works internally by analyzing binaries, reversing protections, and understanding low-level execution.",
+    "description3": "Main interest in malware analysis and reverse engineering, also studying web security and cryptography through CTF competitions."
+  },
+  "navigation": {
+    "about": "About",
+    "education": "Education", 
+    "skills": "Skills",
+    "projects": "Projects",
+    "awards": "Awards",
+    "contact": "Contact"
+  },
+  "security": {
+    "title": "Security Fields",
+    "subtitle": "Areas of expertise"
+  },
+  "tools": {
+    "title": "RE / Analysis Tools",
+    "subtitle": "Essential toolset"
+  },
+  "skills": {
+    "title": "Programming Languages",
+    "subtitle": "Skill levels"
+  },
+  "devStack": {
+    "title": "Development Stack",
+    "subtitle": "Frontend technologies"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Featured work",
+    "title1": "Reverse Engineering CTF Challenges",
+    "description1": "Solving complex binary puzzles in competitive environments",
+    "title2": "ELF Binary Analysis",
+    "description2": "Analyzing Linux executable files and extracting flags",
+    "title3": "Decompiled Function Reversing",
+    "description3": "Implementing reverse operations from decompiled functions",
+    "title4": "WebAssembly Analysis",
+    "description4": "Analyzing WebAssembly-based passcode verification logic",
+    "title5": "VM-based Challenge Solving",
+    "description5": "Reversing custom virtual machine implementations",
+    "title6": "Custom CTF Problem Design",
+    "description6": "Designing and building custom reversing CTF problems",
+    "title7": "Security Competition Participation",
+    "description7": "Team-based hacking challenges and competitions"
+  },
+  "awards": {
+    "title": "Awards",
+    "subtitle": "Achievements unlocked"
+  },
+  "education": {
+    "title": "Education",
+    "subtitle": "Learning path",
+    "school1": "Hogok Elementary School",
+    "period1": "2016 ~ 2022",
+    "school2": "Hogok Middle School", 
+    "period2": "2023 ~ 2025",
+    "school3": "Semyung Computer High School",
+    "period3": "2025 ~",
+    "field1": "Smart Security Solutions"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Get in touch",
+    "role1": "Cybersecurity Student",
+    "role2": "Reverse Engineering Enthusiast", 
+    "role3": "Future Malware Analyst",
+    "status": "Available for opportunities",
+    "emailLabel": "Email",
+    "githubLabel": "GitHub",
+    "locationLabel": "Location",
+    "location": "South Korea"
+  }
+}
