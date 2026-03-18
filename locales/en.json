@@ -1,0 +1,17 @@
+{
+  "hero": {
+    "role": "Cybersecurity Student / Future Malware Analyst",
+    "realName": "aka Kim Gunwoo",
+    "description1": "A cybersecurity student specializing in reverse engineering and vulnerability analysis.",
+    "description2": "Studying how software works internally by analyzing binaries, reversing protections, and understanding low-level execution.",
+    "description3": "Main interest in malware analysis and reverse engineering, also studying web security and cryptography through CTF competitions."
+  },
+  "navigation": {
+    "about": "About",
+    "education": "Education", 
+    "skills": "Skills",
+    "projects": "Projects",
+    "awards": "Awards",
+    "contact": "Contact"
+  }
+}
