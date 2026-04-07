@@ -40,16 +40,19 @@ export function Navigation() {
   return (
     <nav
       className={cn(
-        "fixed top-0 left-0 right-0 z-20 transition-all duration-300",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
         scrolled
-          ? "bg-background/80 backdrop-blur-md border-b border-border"
-          : "bg-transparent"
+          ? "glass-strong py-3"
+          : "bg-transparent py-5"
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <a href="#" className="font-mono text-lg font-bold text-primary text-glow-cyan relative z-20">
-            {"<"}GUnT_0x9{"/>"}
+        <div className="flex items-center justify-between">
+          <a 
+            href="#" 
+            className="font-[family-name:var(--font-display)] text-xl font-bold gradient-text relative z-20 hover:opacity-80 transition-opacity"
+          >
+            GUnT_0x9
           </a>
           
           <div className="hidden md:flex items-center gap-1">
@@ -58,22 +61,27 @@ export function Navigation() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "px-4 py-2 text-sm font-mono transition-all duration-200 relative",
+                  "px-4 py-2 text-sm font-medium transition-all duration-300 relative group",
                   activeSection === item.href.slice(1)
-                    ? "text-primary"
-                    : "text-muted-foreground hover:text-primary"
+                    ? "text-[#9b59ff]"
+                    : "text-white/60 hover:text-white"
                 )}
               >
-                {activeSection === item.href.slice(1) && (
-                  <span className="absolute inset-0 bg-primary/10 rounded" />
-                )}
-                <span className="relative">{item.label}</span>
+                <span className="relative z-10">{item.label}</span>
+                <span 
+                  className={cn(
+                    "absolute bottom-1 left-4 right-4 h-[2px] bg-gradient-to-r from-[#9b59ff] to-[#00f5d4] transition-all duration-300",
+                    activeSection === item.href.slice(1) 
+                      ? "opacity-100 scale-x-100" 
+                      : "opacity-0 scale-x-0 group-hover:opacity-100 group-hover:scale-x-100"
+                  )}
+                />
               </a>
             ))}
           </div>
 
           {/* Mobile menu button */}
-          <button className="md:hidden p-2 text-muted-foreground hover:text-primary">
+          <button className="md:hidden p-2 text-white/60 hover:text-white transition-colors">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>

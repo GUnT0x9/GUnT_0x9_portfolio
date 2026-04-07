@@ -2,20 +2,55 @@
 
 export function GridBackground() {
   return (
-    <div className="fixed inset-0 z-0">
-      {/* Base gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-background" />
+    <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+      {/* Base gradient - deep dark navy/purple */}
+      <div 
+        className="absolute inset-0"
+        style={{
+          background: 'radial-gradient(ellipse at top, #1a1a2e 0%, #0a0a0f 50%, #000000 100%)'
+        }}
+      />
       
-      {/* Cyber grid */}
-      <div className="absolute inset-0 cyber-grid opacity-50" />
+      {/* Ambient Orbs */}
+      <div 
+        className="absolute w-[400px] h-[400px] rounded-full animate-float"
+        style={{
+          background: '#9b59ff',
+          filter: 'blur(80px)',
+          opacity: 0.4,
+          top: '-100px',
+          right: '-100px',
+          animationDelay: '0s'
+        }}
+      />
+      <div 
+        className="absolute w-[300px] h-[300px] rounded-full animate-float"
+        style={{
+          background: '#00f5d4',
+          filter: 'blur(80px)',
+          opacity: 0.3,
+          bottom: '-50px',
+          left: '-50px',
+          animationDelay: '-7s'
+        }}
+      />
+      <div 
+        className="absolute w-[250px] h-[250px] rounded-full animate-float"
+        style={{
+          background: '#6b5ce7',
+          filter: 'blur(80px)',
+          opacity: 0.35,
+          top: '50%',
+          left: '30%',
+          animationDelay: '-14s'
+        }}
+      />
       
-      {/* Radial glow effects */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px]" />
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/10 rounded-full blur-[100px]" />
-      <div className="absolute top-1/2 right-0 w-64 h-64 bg-chart-3/10 rounded-full blur-[80px]" />
-      
-      {/* Scanline overlay */}
-      <div className="absolute inset-0 scanline opacity-30" />
+      {/* Dot Grid Pattern */}
+      <div 
+        className="absolute inset-0 dot-grid"
+        style={{ opacity: 0.03 }}
+      />
     </div>
   )
 }

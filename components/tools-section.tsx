@@ -3,6 +3,7 @@
 import { cn } from "@/lib/utils"
 import Image from "next/image"
 import { useLanguage } from '@/hooks/use-language'
+import { TextScramble } from "./text-scramble"
 
 const tools = [
   {
@@ -25,12 +26,12 @@ export function ToolsSection() {
   return (
     <section className="py-20 px-4">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-mono font-bold text-center mb-4">
-          <span className="text-primary text-glow-cyan">{"<"}</span>
-          Reverse Tools
-          <span className="text-primary text-glow-cyan">{"/>"}</span>
-        </h2>
-        <p className="text-muted-foreground text-center mb-12 font-mono text-sm">// Analysis toolkit</p>
+        <div className="text-center mb-16">
+          <p className="text-[#9b59ff] text-sm uppercase tracking-[0.3em] mb-4">Toolkit</p>
+          <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-bold">
+            <TextScramble text="Reverse Tools" />
+          </h2>
+        </div>
 
         <div className="grid md:grid-cols-2 gap-6">
           {tools.map((tool, index) => (

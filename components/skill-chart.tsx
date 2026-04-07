@@ -3,13 +3,14 @@
 import { useEffect, useState } from "react"
 import { cn } from "@/lib/utils"
 import { useLanguage } from '@/hooks/use-language'
+import { TextScramble } from "./text-scramble"
 
 const skills = [
-  { name: "Python", level: 90, color: "primary" },
-  { name: "C", level: 85, color: "accent" },
-  { name: "Java", level: 65, color: "chart-3" },
-  { name: "Assembly", level: 75, color: "chart-4" },
-  { name: "JavaScript", level: 60, color: "chart-5" },
+  { name: "Python", level: 90, color: "#9b59ff" },
+  { name: "C", level: 85, color: "#00f5d4" },
+  { name: "Java", level: 65, color: "#6b5ce7" },
+  { name: "Assembly", level: 75, color: "#ff6b6b" },
+  { name: "JavaScript", level: 60, color: "#ffd93d" },
 ]
 
 export function SkillChart() {
@@ -36,12 +37,12 @@ export function SkillChart() {
   return (
     <section id="skills" className="py-20 px-4">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-mono font-bold text-center mb-4">
-          <span className="text-primary text-glow-cyan">{"<"}</span>
-          Programming Languages
-          <span className="text-primary text-glow-cyan">{"/>"}</span>
-        </h2>
-        <p className="text-muted-foreground text-center mb-12 font-mono text-sm">// Technical proficiency</p>
+        <div className="text-center mb-16">
+          <p className="text-[#9b59ff] text-sm uppercase tracking-[0.3em] mb-4">Proficiency</p>
+          <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-bold">
+            <TextScramble text="Programming Languages" />
+          </h2>
+        </div>
 
         <div className="space-y-6">
           {skills.map((skill, index) => (
@@ -53,48 +54,27 @@ export function SkillChart() {
             >
               <div className="flex justify-between mb-2">
                 <span className={cn(
-                  "font-mono font-bold transition-colors",
-                  hoveredSkill === index ? (
-                    skill.color === "primary" ? "text-primary text-glow-cyan" :
-                    skill.color === "accent" ? "text-accent text-glow-purple" :
-                    skill.color === "chart-3" ? "text-chart-3 text-glow-green" :
-                    `text-${skill.color}`
-                  ) : "text-foreground"
+                  "font-bold transition-colors",
+                  hoveredSkill === index ? "text-white" : "text-white/80"
                 )}>
                   {skill.name}
                 </span>
-                <span className="font-mono text-muted-foreground">{skill.level}%</span>
+                <span className="text-white/50">{skill.level}%</span>
               </div>
               
-              <div className="relative h-4 bg-secondary rounded-full overflow-hidden">
-                {/* Background pattern */}
-                <div className="absolute inset-0 opacity-20">
-                  {Array.from({ length: 20 }).map((_, i) => (
-                    <div
-                      key={i}
-                      className="absolute top-0 bottom-0 w-px bg-foreground/20"
-                      style={{ left: `${(i + 1) * 5}%` }}
-                    />
-                  ))}
-                </div>
-                
+              <div className="relative h-3 bg-white/10 rounded-full overflow-hidden">
                 {/* Progress bar */}
                 <div
-                  className={cn(
-                    "h-full rounded-full transition-all duration-1000 ease-out relative overflow-hidden",
-                    skill.color === "primary" ? "bg-primary" :
-                    skill.color === "accent" ? "bg-accent" :
-                    skill.color === "chart-3" ? "bg-chart-3" :
-                    skill.color === "chart-4" ? "bg-chart-4" :
-                    "bg-chart-5"
-                  )}
+                  className="h-full rounded-full transition-all duration-1000 ease-out relative overflow-hidden"
                   style={{
                     width: animated ? `${skill.level}%` : "0%",
+                    backgroundColor: skill.color,
                     transitionDelay: `${index * 100}ms`,
+                    boxShadow: `0 0 10px ${skill.color}40`,
                   }}
                 >
                   {/* Shine effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-foreground/20 to-transparent -translate-x-full animate-[shimmer_2s_infinite]" style={{ animationDelay: `${index * 200}ms` }} />
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full animate-[shimmer_2s_infinite]" style={{ animationDelay: `${index * 200}ms` }} />
                 </div>
               </div>
             </div>
@@ -151,11 +131,10 @@ export function SkillChart() {
                   const y = 100 + 80 * scale * Math.sin(angle)
                   return `${x},${y}`
                 }).join(" ")}
-                fill="currentColor"
-                fillOpacity="0.3"
-                stroke="currentColor"
+                fill={skills[0].color + "40"}
+                stroke={skills[0].color}
                 strokeWidth="2"
-                className="text-primary transition-all duration-1000"
+                className="transition-all duration-1000"
               />
               
               {/* Skill points */}
@@ -171,8 +150,11 @@ export function SkillChart() {
                     cy={y}
                     r="4"
                     fill="currentColor"
-                    className="text-primary transition-all duration-1000"
-                    style={{ transitionDelay: `${index * 100}ms` }}
+                    className="transition-all duration-1000"
+                    style={{ 
+                      fill: skills[index].color,
+                      transitionDelay: `${index * 100}ms` 
+                    }}
                   />
                 )
               })}
@@ -186,7 +168,7 @@ export function SkillChart() {
               return (
                 <span
                   key={index}
-                  className="absolute font-mono text-xs text-muted-foreground transform -translate-x-1/2 -translate-y-1/2"
+                  className="absolute text-xs text-white/50 transform -translate-x-1/2 -translate-y-1/2"
                   style={{ left: `${x}%`, top: `${y}%` }}
                 >
                   {skill.name}
